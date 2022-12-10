@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Input, Button, Link } from "../../components";
+import { Input, Button, Link, Title } from "../../components/styles";
+import { useAuth } from "../../hooks";
 import { API } from "../../utils";
 
 const Login = () => {
@@ -9,9 +10,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (localStorage.getItem("accessToken")) navigate("/todo");
-  }, []);
+  useAuth();
 
   const checkEmailValidation = () => {
     const emailRegExp = /\w+@\w+\.\w+\.*\w*/;
@@ -35,13 +34,17 @@ const Login = () => {
       localStorage.setItem("accessToken", data.access_token);
       navigate("/todo");
     } catch (e) {
-      alert(`오류 발생: ${e.message}`);
+      if (e.response.status === 401) {
+        alert("아이디 또는 비밀번호를 확인해주세요.");
+      } else {
+        alert(`오류 발생: ${e.message}`);
+      }
     }
   };
 
   return (
     <>
-      <div>로그인</div>
+      <Title>로그인</Title>
       <Input
         placeholder="아이디를 입력하세요"
         value={id}
@@ -62,12 +65,15 @@ const Login = () => {
         }}
       />
       <Button
+        style={{ marginTop: "40px" }}
         disabled={!(checkEmailValidation() && checkPwdValidation())}
         onClick={login}
       >
         로그인
       </Button>
-      <Link onClick={() => navigate("/join")}>아직 회원이 아니신가요?</Link>
+      <Link style={{ marginTop: "16px" }} onClick={() => navigate("/join")}>
+        아직 회원이 아니신가요?
+      </Link>
     </>
   );
 };

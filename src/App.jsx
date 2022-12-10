@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Join from "./pages/Join";
 import Login from "./pages/Login";
 import Todolist from "./pages/Todolist";
-import { Container } from "./components";
+import { Container } from "./components/styles";
 
 function App() {
   return (
