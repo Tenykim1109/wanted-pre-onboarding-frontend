@@ -10,6 +10,7 @@ export const Container = styled.main`
 export const Input = styled.input`
   background: #f3f3f3;
   border-radius: 20px;
+  width: 310px;
   border: 0;
   font-size: 20px;
   padding: 16px;
@@ -59,6 +60,12 @@ export const Text = styled.span`
     `}
 `;
 
+export const Title = styled.label`
+  font-size: 48px;
+  padding: 16px;
+  margin: 8px;
+`;
+
 export const TodoContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -73,12 +80,39 @@ export const TodoContainer = styled.div`
   border-radius: 20px;
 `;
 
-export const TodoButton = styled.button``;
+export const TodoButton = styled.button`
+  border: none;
+  border-radius: 20px;
+  background: white;
+  font-size: 16px;
+  padding: 8px;
+
+  ${(props) => {
+    switch (props.color) {
+      case "danger":
+        return css`
+          color: red;
+        `;
+      case "primary":
+        return css`
+          color: blue;
+        `;
+      default:
+        return css`
+          color: ${props.color};
+        `;
+    }
+  }}
+
+  &:hover {
+    background: #f8f8f8;
+  }
+`;
 
 export const TodoInput = styled.input`
   font-size: 16px;
   padding: 8px;
   border: none;
   border-radius: 20px;
-  background: #f3f3f3;
+  background: #f5f5f5;
 `;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Input, Button, Text } from "../../components";
+import { Input, Button, Text, Title } from "../../components/styles";
 import { API } from "../../utils";
 
 const Join = () => {
@@ -34,17 +34,20 @@ const Join = () => {
       });
 
       alert("회원가입이 완료되었습니다.");
-      console.log(data);
       localStorage.setItem("accessToken", data.access_token);
       navigate("/todo");
     } catch (e) {
-      alert(`오류 발생: ${e.message}`);
+      if (e.response.status === 400) {
+        alert(e.response.data.message);
+      } else {
+        alert(`오류 발생: ${e.message}`);
+      }
     }
   };
 
   return (
     <>
-      <div>회원가입</div>
+      <Title>회원가입</Title>
       <Input
         placeholder="아이디를 입력하세요"
         value={id}
@@ -71,7 +74,9 @@ const Join = () => {
       {!checkSamePwd() && (
         <Text color="red">입력하신 비밀번호와 일치하지 않습니다.</Text>
       )}
-      <Button onClick={join}>회원가입</Button>
+      <Button style={{ marginTop: "40px" }} onClick={join}>
+        회원가입
+      </Button>
     </>
   );
 };
