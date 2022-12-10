@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const URL = window.location.hostname === "localhost" ? "" : "/proxy";
+
 export const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: URL,
   headers: {
     "Content-Type": "application/json",
   },
