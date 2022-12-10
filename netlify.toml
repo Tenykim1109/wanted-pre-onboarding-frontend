@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/proxy/*"
-  to = "https://effortless-hamster-8f3415.netlify.app/:splat"
+  to = "https://pre-onboarding-selection-task.shop/:splat"
   status = 200
   force = true
