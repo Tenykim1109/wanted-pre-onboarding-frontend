@@ -54,6 +54,7 @@ const Todolist = () => {
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
         onKeyDown={(e) => {
+          if (e.nativeEvent.isComposing) return;
           if (e.key === "Enter") createTodo();
         }}
       />
