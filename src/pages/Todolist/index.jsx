@@ -49,15 +49,18 @@ const Todolist = () => {
   return (
     <>
       <Title>투두 리스트</Title>
-      <Input
-        placeholder="내용을 입력해주세요."
-        value={todo}
-        onChange={(e) => setTodo(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.nativeEvent.isComposing) return;
-          if (e.key === "Enter") createTodo();
-        }}
-      />
+      <div>
+        <Input
+          placeholder="내용을 입력해주세요."
+          value={todo}
+          onChange={(e) => setTodo(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.nativeEvent.isComposing) return;
+            if (e.key === "Enter") createTodo();
+          }}
+        />
+        <Button onClick={() => createTodo()}>추가</Button>
+      </div>
       <div
         style={{
           margin: "30px 8px 60px 8px",
