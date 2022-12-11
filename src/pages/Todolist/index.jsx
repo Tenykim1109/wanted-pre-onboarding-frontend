@@ -62,7 +62,7 @@ const Todolist = () => {
         style={{
           margin: "30px 8px 60px 8px",
           height: "512px",
-          overflow: "scroll",
+          overflow: "auto",
         }}
       >
         {todoList.map((value) => (
