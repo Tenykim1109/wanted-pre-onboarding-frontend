@@ -42,9 +42,52 @@ src
 
 ## 4. 구현 내용
 
-- [x] **Assignments 1**
-- [x] 카페라떼
-- [ ] 카푸치노
+### 4.1 로그인 및 회원가입
+
+**로그인**
+![로그인](https://user-images.githubusercontent.com/48265915/206908539-f8f5b639-b543-474d-8b0e-56a9fdd18a45.gif)
+<br />
+<br />
+**회원가입**
+![회원가입](https://user-images.githubusercontent.com/48265915/206908546-caed4e95-d61e-4ff6-b2a4-415d0580f99e.gif)
+
+<br />
+
+**✅ Assignments 1**
+
+- [x] 이메일 유효성 검사 (@ 포함 및 이메일 형식인지)
+- [x] 비밀번호 유효성 검사(8자 이상인지)
+
+**✅ Assignments 2**
+
+- [x] 로그인 후 /todo 경로 이동
+- [x] 로컬 스토리지에 JWT Token 저장
+
+**✅ Assignments 3**
+
+- [x] /todo 경로 접속시 JWT Token이 없을 경우 / 경로로 리다이렉트
+- [x] / 경로로 접속시 JWT Token이 존재할 경우 /todo 경로로 리다이렉트
+
+### 4.2 투두리스트 등록, 수정 및 삭제
+
+**투두리스트 등록**
+![투두리스트 등록](https://user-images.githubusercontent.com/48265915/206908559-568b21a9-7891-4898-8112-384c7fd7db12.gif)
+
+<br />
+
+**투두리스트 수정 및 삭제**
+![투두리스트 수정 및 삭제](https://user-images.githubusercontent.com/48265915/206908571-f1dbffb6-90a0-4757-aab1-82fd73cab313.gif)
+
+**✅ Assignments 4**
+
+- [x] 투두리스트 목록 출력
+- [x] 입력창에 내용 입력후 엔터키 입력 또는 추가 버튼 클릭시 새로운 투두리스트 추가
+
+**✅ Assignments 5**
+
+- [x] 개별 아이템의 수정 버튼 클릭시 수정 모드 진입
+- [x] 내용 수정후 제출 버튼 클릭시 개별 아이템 내용 수정(아무것도 입력하지 않았을 경우 alert 메시지 출력)
+- [x] 삭제 버튼 클릭시 개별 아이템 삭제
 
 ## 5. 프로젝트 실행(로컬 환경)
 
