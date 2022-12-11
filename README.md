@@ -46,8 +46,9 @@ src
 
 **로그인**
 ![로그인](https://user-images.githubusercontent.com/48265915/206908539-f8f5b639-b543-474d-8b0e-56a9fdd18a45.gif)
+
 <br />
-<br />
+
 **회원가입**
 ![회원가입](https://user-images.githubusercontent.com/48265915/206908546-caed4e95-d61e-4ff6-b2a4-415d0580f99e.gif)
 
