@@ -75,13 +75,13 @@ src
 
 **투두리스트 등록**
 
-![투두리스트 등록](https://user-images.githubusercontent.com/48265915/206908559-568b21a9-7891-4898-8112-384c7fd7db12.gif)
+![투두리스트 ](https://user-images.githubusercontent.com/48265915/207027044-6723150a-55e3-4d60-9479-d583e4776507.gif)
 
 <br />
 
 **투두리스트 수정 및 삭제**
 
-![투두리스트 수정 및 삭제](https://user-images.githubusercontent.com/48265915/206908571-f1dbffb6-90a0-4757-aab1-82fd73cab313.gif)
+![투두리스트 수정,삭제](https://user-images.githubusercontent.com/48265915/207027068-fa32f162-cf0f-4752-9823-77918c34f353.gif)
 
 **✅ Assignments 4**
 
